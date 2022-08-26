@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngineAI;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public UnityEngine.AI.NavMeshAgent agent;
+    public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     // Finds position of player and agent
     {
         player = GameObject.Find("Player").transform;
-        agent = GetComponents<UnityEngine.AI.NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
 
     private void Patrolling() {
         if (!walkPointSet) {
-            searchWalkPoint();
+            SearchWalkPoint();
         }
 
         if (walkPointSet) {
@@ -84,15 +84,15 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(transform.position);
     
 
-        transform.LookAt(Player);
+        transform.LookAt(player);
 
         if (!alreadyAttacked) {
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
-    }
+    } 
 
-    private ResetAttack() {
+    private void ResetAttack() {
         alreadyAttacked = false;
     }
 }
