@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngineAI;
 
@@ -33,6 +31,7 @@ public class Enemy : MonoBehaviour
     {
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        
         if (!playerInSightRange && !playerInAttackRange) {
             Patrolling();
         }
@@ -41,24 +40,59 @@ public class Enemy : MonoBehaviour
         }
         if (playerInSightRange && playerInAttackRange) {
             AttackPlayer();
+        }    
+    }   
+
+    private void Patrolling() {
+        if (!walkPointSet) {
+            searchWalkPoint();
         }
 
+        if (walkPointSet) {
+            agent.SetDestination(walkPoint);
+        }
+
+        Vector3 distanceToWalkPoint = transform.position - walkPoint; 
+        
+        if (distanceToWalkPoint.magnitude < 1f) {
+                walkPointSet = false;
+            }
+    }
+    
+
+    private void SearchWalkPoint() {
+        float randomZ = Random.Range(-walkPointRange, walkPointRange);
+        float randomX = Random.Range(-walkPointRange, walkPointRange);
+        walkPoint = new Vector3(transform.position.x + randomX, transform.position.z, transform.position.z + randomZ);
+
+        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround)) {
+            walkPointSet = true;
+        }
+
+    }
+
+    private void ChasePlayer() {
+        agent.SetDestination(player.position);
+    }
+
+    private void AttackPlayer() {
+        //Add attack code here: melee attack
+
+
+        //
+        // Make sure enemy doesn't move
+        agent.SetDestination(transform.position);
+    
+
+        transform.LookAt(Player);
+
+        if (!alreadyAttacked) {
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
 
-    private void Patrolling()
-    {
-         
-
-    }
-
-    private void ChasePlayer()
-    {
-        
-    }
-
-    private void AttackPlayer()
-    {
-        
+    private ResetAttack() {
+        alreadyAttacked = false;
     }
 }
