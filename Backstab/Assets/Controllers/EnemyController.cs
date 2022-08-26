@@ -7,9 +7,11 @@ public class EnemyController : MonoBehaviour
 {
 
     public float lookRadius = 10f;
+    float timeBetweenAttacks = 5f;
 
     Transform target;
     NavMeshAgent agent;
+    bool alreadyAttacked;
 
     void OnDrawGizmosSelected()
     {
@@ -31,6 +33,22 @@ public class EnemyController : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= lookRadius) {
             agent.SetDestination(target.position);
+            attackPlayer();
+            
         }
     }
+
+    void attackPlayer() {
+        if (!alreadyAttacked) {
+            alreadyAttacked = true;
+
+        }
+        Invoke(nameof(ResetAttack), timeBetweenAttacks);
+
+    }
+
+    void ResetAttack() {
+        alreadyAttacked = false; 
+    }
 }
+
