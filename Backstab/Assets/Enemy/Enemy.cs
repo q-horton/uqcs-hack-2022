@@ -1,13 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour {
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
 
     //Patrolling
+    public float lookRadius = 10f;
     public Vector3 walkPoint;
     bool walkPointSet;
     float walkPointRange;
@@ -20,7 +22,7 @@ public class Enemy : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    private void Awake()
+    private void Start()
     // Finds position of player and agent
     {
         player = GameObject.Find("Player").transform;
@@ -42,6 +44,11 @@ public class Enemy : MonoBehaviour
             AttackPlayer();
         }    
     }   
+
+    void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
 
     private void Patrolling() {
         if (!walkPointSet) {
