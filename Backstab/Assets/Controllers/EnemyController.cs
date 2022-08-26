@@ -7,7 +7,9 @@ public class EnemyController : MonoBehaviour
 {
 
     public float lookRadius = 10f;
-    float timeBetweenAttacks = 5f;
+    public float attackRadius = 7f;
+    float timeBetweenAttacks = 20f;
+    public int attackDamage = 2;
 
     Transform target;
     NavMeshAgent agent;
@@ -15,8 +17,10 @@ public class EnemyController : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 
     // Start is called before the first frame update
@@ -33,15 +37,17 @@ public class EnemyController : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= lookRadius) {
             agent.SetDestination(target.position);
-            attackPlayer();
+            if (distance <= attackRadius) {
+                attackPlayer();
+            }
             
         }
     }
 
     void attackPlayer() {
         if (!alreadyAttacked) {
+            target.GetComponent<CharacterStats>().TakeDamage(attackDamage);
             alreadyAttacked = true;
-
         }
         Invoke(nameof(ResetAttack), timeBetweenAttacks);
 
