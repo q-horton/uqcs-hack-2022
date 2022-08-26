@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    public GameObject pickup;
+
     void OnTriggerEnter(Collider other) {
-        print(other.gameObject.name + "collided with pickup.");
+        if (other.gameObject.tag == "Player") {
+            PlayerStats ps = other.gameObject.GetComponent<PlayerStats>();
+            if (!ps.isInventoryFull()) {
+                ps.inventory[ps.getFirstOpenInvSlot()] = pickup;
+                Destroy(pickup);
+            }
+        }
     }
 
     // Start is called before the first frame update
