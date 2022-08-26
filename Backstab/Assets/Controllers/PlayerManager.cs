@@ -10,9 +10,8 @@ public class PlayerManager : MonoBehaviour
     void Awake() {
         instance = this;
     }
-
     #endregion
+
+    public GameObject player;
+    
 }
-
-public GameObject player;
-
