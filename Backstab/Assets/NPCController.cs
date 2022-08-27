@@ -85,7 +85,7 @@ public class NPCController : MonoBehaviour
     void attackEntity() {
         if (Time.time > lastHit + timeBetweenAttacks) {
             if (!evil) {
-            target.GetComponent<EnemyStats>().TakeDamage(attackDamage);
+                target.GetComponent<EnemyStats>().TakeDamage(attackDamage);
             } else {
                 ally.GetComponent<CharacterStats>().TakeDamage(attackDamage);
             }
