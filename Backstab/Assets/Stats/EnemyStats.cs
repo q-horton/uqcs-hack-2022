@@ -7,7 +7,7 @@ public class EnemyStats : MonoBehaviour
     public int maxHealth = 100;
     int currentHealth;
     float dropRate = 1f;
-    GameObject pickup;
+    public GameObject pickup;         
 
     void Start() {
         currentHealth = maxHealth;
@@ -24,16 +24,22 @@ public class EnemyStats : MonoBehaviour
     }
     void Die() {
         //death animation
+        
         GetComponent<Collider>().enabled = false;
         this.enabled = false;
+        dropItem();
+        prefabSpawner.EnemyCount --;
+        Destroy(gameObject);
+
+        
+
+    }
+
+    void dropItem() {
         if (Random.Range(0f, 1f) <= dropRate) {
             GameObject pu = Instantiate(pickup, transform.position, transform.rotation);
             pu.GetComponent<ID>().Id = Random.Range(0,6);
         }
-        Destroy(gameObject);
-
-        prefabSpawner.EnemyCount --;
-
     }
 
 }
