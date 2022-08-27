@@ -6,7 +6,7 @@ public class EnemyStats : MonoBehaviour
 {
     public int maxHealth = 100;
     int currentHealth;
-    float dropRate = 1f;
+    float dropRate = 0.02f;
     public GameObject pickup;         
 
     void Start() {

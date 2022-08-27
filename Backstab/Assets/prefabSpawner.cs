@@ -21,6 +21,13 @@ public class prefabSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ShouldSpawn()) {
+            Spawn();
+        }
+    }
+
+    private void Spawn()
+    {
         nextSpawnTime = Time.time + spawnDelay;
         if (EnemyCount < difficulty) {
             Instantiate(EnemyPrefab, transform.position, transform.rotation); 
