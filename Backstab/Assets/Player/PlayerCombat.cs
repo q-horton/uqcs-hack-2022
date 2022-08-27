@@ -10,13 +10,13 @@ public class PlayerCombat : MonoBehaviour
 
     public Transform attackPoint;
     public float attackRange = baseAttackRange;
-    public LayerMask enemy;
+    public LayerMask Enemy;
     public int attackDamage = baseAttackDamage;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E)) {
+        if(Input.GetKeyDown("e")) {
             Attack();
         }
         attackRange = baseAttackRange * ps.reach;
@@ -26,12 +26,12 @@ public class PlayerCombat : MonoBehaviour
     void Attack() {
         //Play attack animation
         // detect enemies in range
-        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemy);
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, Enemy);
         if (hitEnemies != null) {
-            foreach(Collider enemy in hitEnemies)
+            foreach(Collider e in hitEnemies)
             {
                 //Attack enemies
-                enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage);
+                e.GetComponentInParent<EnemyStats>().TakeDamage(attackDamage);
             }
         }
 
