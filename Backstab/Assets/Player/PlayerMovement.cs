@@ -8,9 +8,12 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public PlayerStats stats;
 
-    public float speed = 12f;
+    static float baseSpeed = 12f;
+    static float baseJumpHeight = 3f;
+
+    public float speed = baseSpeed;
     public float gravity = -9.81f;
-    public float jumpHeight = 3f;
+    public float jumpHeight = baseJumpHeight;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -22,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        speed = baseSpeed * stats.speed;
+        jumpHeight = baseJumpHeight * stats.jump;
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0) {

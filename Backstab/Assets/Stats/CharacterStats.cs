@@ -5,7 +5,6 @@ public class CharacterStats : MonoBehaviour
 
     int maxHealth = 20;
     public int health { get; private set; }
-    public Stat damage;
     public Stat armor;
     public HealthBar healthBar;
 
@@ -15,6 +14,12 @@ public class CharacterStats : MonoBehaviour
 
     public int getHealth() {
         return health;
+    }
+
+    public void healthBoost(float scale) {
+        maxHealth = Mathf.FloorToInt(maxHealth * scale);
+        health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage(int damage) {
@@ -32,6 +37,7 @@ public class CharacterStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = 20;
         health = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }

@@ -7,9 +7,18 @@ public class Stat
 {
     [SerializeField]
     private int baseValue;
+    private int totalValue;
+
+    public int getBaseValue() {
+        return baseValue;
+    }
 
     public int getValue()
     {
-        return baseValue;
+        return totalValue;
+    }
+
+    public void scaleValue(float scale) {
+        totalValue = Mathf.FloorToInt(baseValue * scale);
     }
 }
