@@ -6,6 +6,8 @@ public class EnemyStats : MonoBehaviour
 {
     public int maxHealth = 100;
     int currentHealth;
+    float dropRate = 1f;
+    GameObject pickup;
 
     void Start() {
         currentHealth = maxHealth;
@@ -24,7 +26,13 @@ public class EnemyStats : MonoBehaviour
         //death animation
         GetComponent<Collider>().enabled = false;
         this.enabled = false;
+        if (Random.Range(0f, 1f) <= dropRate) {
+            GameObject pu = Instantiate(pickup, transform.position, transform.rotation);
+            pu.GetComponent<ID>().Id = Random.Range(0,6);
+        }
         Destroy(gameObject);
+
+        prefabSpawner.EnemyCount --;
 
     }
 
