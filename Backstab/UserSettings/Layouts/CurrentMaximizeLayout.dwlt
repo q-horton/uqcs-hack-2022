@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: aa780000
-      m_LastClickedID: 30890
-      m_ExpandedIDs: 6279ffff6479ffff747effffec80ffff0883ffffaed9ffff00dbffff38fbffffaa780000
+      m_SelectedIDs: da530100
+      m_LastClickedID: 87002
+      m_ExpandedIDs: 3e62fdfffa81fdff22a3fdff8ca3fdff3eabfdff3ab4fdff82b9fdff1e59fefff8a9feff16acfeffeae2feff96fbfeff6cfcfeffb8fcfeff9efdfefff2fdfeff5802ffffb004ffff5415ffff3e16ffff4c18ffff1c1bffffec25ffff5626ffff9e29ffff3456ffff6e5bffff2465ffff2665ffff6279ffff6479ffff747effffec80ffff0883ffffaed9ffff00dbffff38fbffffaa780000ce7e0000549b000068a00000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -503,9 +503,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.8470998, y: 4.3618755, z: 0.58014965}
+    m_Target: {x: -2.2594204, y: 5.439156, z: 0.9519436}
     speed: 2
-    m_Value: {x: 2.8470998, y: 4.3618755, z: 0.58014965}
+    m_Value: {x: -2.2594204, y: 5.439156, z: 0.9519436}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -552,13 +552,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.22142519, y: -0.22862072, z: 0.053484958, w: 0.94649637}
+    m_Target: {x: -0.054737147, y: 0.6842959, z: -0.051622067, w: -0.7253458}
     speed: 2
-    m_Value: {x: 0.22142382, y: -0.2286193, z: 0.053484626, w: 0.9464905}
+    m_Value: {x: -0.05473582, y: 0.6842793, z: -0.05162082, w: -0.72532827}
   m_Size:
-    m_Target: 2.352213
+    m_Target: 9.206025
     speed: 2
-    m_Value: 2.352213
+    m_Value: 9.206025
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -630,8 +630,8 @@ MonoBehaviour:
     y: 362
     width: 978
     height: 225.33331
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
@@ -691,26 +691,26 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 65.00122}
+    scrollPos: {x: 0, y: 127.50046}
     m_SelectedIDs: 4a5b0000
     m_LastClickedID: 23370
-    m_ExpandedIDs: 00000000225b000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000225b00004a5b0000b673000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Tree_Textures
+      m_OriginalName: Tree_Textures
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 41974
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -747,8 +747,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: da530100
+    m_LastClickedInstanceID: 87002
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
