@@ -781,9 +781,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3918530948547861961, guid: 2125e70ba9d94304d9c7e3d78b829f07, type: 3}
+      propertyPath: jump
+      value: 
+      objectReference: {fileID: 2100000, guid: c61e7148c3b275645b20671943bb27bf, type: 2}
+    - target: {fileID: 3918530948547861961, guid: 2125e70ba9d94304d9c7e3d78b829f07, type: 3}
+      propertyPath: reach
+      value: 
+      objectReference: {fileID: 2100000, guid: ae1b00c3c3d25104bb858890046e557e, type: 2}
+    - target: {fileID: 3918530948547861961, guid: 2125e70ba9d94304d9c7e3d78b829f07, type: 3}
+      propertyPath: regen
+      value: 
+      objectReference: {fileID: 2100000, guid: 98da12f3ecbfbb844aebad2ca22c8123, type: 2}
+    - target: {fileID: 3918530948547861961, guid: 2125e70ba9d94304d9c7e3d78b829f07, type: 3}
+      propertyPath: speed
+      value: 
+      objectReference: {fileID: 2100000, guid: 1356ab8f50b87f042959c67e983cc838, type: 2}
+    - target: {fileID: 3918530948547861961, guid: 2125e70ba9d94304d9c7e3d78b829f07, type: 3}
+      propertyPath: armour
+      value: 
+      objectReference: {fileID: 2100000, guid: 2ceaf05ac265d364c94052ea2e169fe1, type: 2}
+    - target: {fileID: 3918530948547861961, guid: 2125e70ba9d94304d9c7e3d78b829f07, type: 3}
       propertyPath: pickup
       value: 
       objectReference: {fileID: 935334277}
+    - target: {fileID: 3918530948547861961, guid: 2125e70ba9d94304d9c7e3d78b829f07, type: 3}
+      propertyPath: strength
+      value: 
+      objectReference: {fileID: 2100000, guid: a75d1171d8e719843b79f1f48d293f66, type: 2}
     - target: {fileID: 3918530948547861963, guid: 2125e70ba9d94304d9c7e3d78b829f07, type: 3}
       propertyPath: m_AutoBraking
       value: 1

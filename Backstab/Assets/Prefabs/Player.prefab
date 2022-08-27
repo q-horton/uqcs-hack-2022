@@ -107,8 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef4c71bb70a5174aad55b8f7c4e036f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage:
-    baseValue: 0
   armor:
     baseValue: 0
   healthBar: {fileID: 0}
@@ -124,11 +122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a549b4d108b3a4942816e804b99a580b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps: {fileID: 0}
   attackPoint: {fileID: 8347858539539948942}
   attackRange: 1
-  enemy:
+  Enemy:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   attackDamage: 50
 --- !u!114 &8506349010948407701
 MonoBehaviour:
@@ -142,7 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d7a5db5d6d5c64c91c41a4086b1b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: []
+  inventory: 
+  cs: {fileID: 0}
   jump: 1
   regen: 0
   strength: 1
