@@ -67,6 +67,7 @@ public class EnemyStats : MonoBehaviour
                     pu.GetComponentInChildren<Renderer>().material = reach;
                     break;
             }
+            print("Id: " + id + "Material: " + pu.GetComponentInChildren<Renderer>().material.name);
         }
     }
 
