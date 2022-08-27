@@ -39,29 +39,25 @@ public class EnemyController : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
         float distance2 = Vector3.Distance(otherTarget.position, transform.position);
-        if (distance != 0 && distance < distance2) {
+        if (distance < distance2) {
             agent.SetDestination(target.position);
             float sporaticAttack = Random.Range(0f, 1.5f);
             if (distance <= attackRadius) {
                 if (Time.time >= Time.time + sporaticAttack) {
-                    if (distance <= attackRadius) {
                         attackPlayer(1);
-                    }
-                }   
+                }
             }
         
-        } else if (distance != 0 && distance > distance2) {
+        } else if (distance > distance2) {
             agent.SetDestination(otherTarget.position);
             float sporaticAttack = Random.Range(0f, 1.5f);
-            if (distance <= attackRadius) {
+            if (distance2 <= attackRadius) {
                 if (Time.time >= Time.time + sporaticAttack) {
-                    if (distance <= attackRadius) {
                         attackPlayer(2);
                     }
                 }   
             }
         }
-    }
 
     void attackPlayer(int player) {
         if (Time.time > lastHit + timeBetweenAttacks) {

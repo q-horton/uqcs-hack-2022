@@ -1329,8 +1329,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 50082383}
     - target: {fileID: 8347858538446661878, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
+      propertyPath: stage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347858538446661878, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
       propertyPath: Enemy.m_Bits
       value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347858539539948936, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8506349010948407701, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
       propertyPath: cs
@@ -1340,7 +1348,8 @@ PrefabInstance:
       propertyPath: inventory.Array.size
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8347858539539948936, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
 --- !u!114 &910311713 stripped
 MonoBehaviour:
@@ -1924,7 +1933,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1499696842}
-  - component: {fileID: 1499696841}
   - component: {fileID: 1499696840}
   - component: {fileID: 1499696844}
   - component: {fileID: 1499696843}
@@ -1953,30 +1961,7 @@ MonoBehaviour:
   armor:
     baseValue: 0
   healthBar: {fileID: 1651618403}
---- !u!114 &1499696841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499696838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe0b72cde8417aa4cb6f81e1eebc1f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Layer:
-    serializedVersion: 2
-    m_Bits: 8
-  lookRadius: 500
-  attackRadius: 1
-  evil: 0
-  attackDamage: 25
-  target: {fileID: 645708974}
-  ally: {fileID: 50082390}
-  agent: {fileID: 1499696845}
-  targets: []
-  health: 10
+  isDead: 0
 --- !u!4 &1499696842
 Transform:
   m_ObjectHideFlags: 0
@@ -2059,6 +2044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 000000000000000000000000000000000000000000000000
   cs: {fileID: 1499696840}
+  isDead: 0
   jump: 1
   regen: 1
   strength: 1

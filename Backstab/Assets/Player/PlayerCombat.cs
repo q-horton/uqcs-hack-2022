@@ -31,12 +31,9 @@ public class PlayerCombat : MonoBehaviour
         if (hitEnemies != null) {
             foreach(Collider e in hitEnemies)
             {
-                if (stage) {
-                    e.GetComponentInParent<CharacterStats>().TakeDamage(attackDamage);
-                } else {
                 //Attack enemies
                 e.GetComponentInParent<EnemyStats>().TakeDamage(attackDamage);
-                }
+                
             }
         }
 
