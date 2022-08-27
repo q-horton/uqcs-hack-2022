@@ -7,12 +7,13 @@ public class PlayerStats : MonoBehaviour
     public int[] inventory = new int[6];
 
     public CharacterStats cs;
+    public bool isDead = false;
 
     public float jump = 1f;
     public float regen = 1f;
     public float strength = 1f;
     public float speed = 1f;
-    public float armour = 0;
+    public float armour = 0f;
     public float reach = 1f;
 
     int regenOld = 0;
@@ -32,6 +33,8 @@ public class PlayerStats : MonoBehaviour
         speed = 1f + 0.05f * inventory[3];
         armour = 0.01f * inventory[4];
         reach = 1f + 0.02f * inventory[5];
+
+        isDead = cs.isDead;
 
         cs.armor.addBuff(armour);
 

@@ -7,6 +7,7 @@ public class CharacterStats : MonoBehaviour
     public int health { get; private set; }
     public Stat armor;
     public HealthBar healthBar;
+    public bool isDead = false;
 
     public int getMaxHealth() {
         return maxHealth;
@@ -54,7 +55,6 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void Die()
     {
-        // add die UI
-        Debug.Log(transform.name + " died.");
+        isDead = true;
     }
 }
