@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class NPCController : MonoBehaviour
 {
-
-    public float lookRadius = 50f;
+    public LayerMask Layer;
+    public float lookRadius = 5000f;
     public float attackRadius = 3f;
     float timeBetweenAttacks = 5f;
     public bool evil = false;
@@ -17,6 +17,8 @@ public class NPCController : MonoBehaviour
     public Transform target;
     public Transform ally;
     public NavMeshAgent agent;
+    public GameObject[] targets;
+    public int health = 10;
 
     void OnDrawGizmosSelected()
     {
@@ -26,13 +28,21 @@ public class NPCController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 
+    void Awake()
+    {
+        Layer = LayerMask.GetMask("Player");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         ally = PlayerManager.instance.player.transform;
-        target = GameObject.FindGameObjectWithTag("Enemy").transform;
         agent = GetComponent<NavMeshAgent>();
-        
+        targets = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject t in targets) {
+            target = t.transform;
+            break;
+        }
     }
 
     // Update is called once per frame
@@ -40,30 +50,34 @@ public class NPCController : MonoBehaviour
     {   
         if (!evil) {
             if (target == null) {
-                target = GameObject.FindGameObjectWithTag("Enemy").transform;
-                if (target == null) {
-                    agent.SetDestination(ally.position);
+                targets = GameObject.FindGameObjectsWithTag("Enemy");   
+                foreach (GameObject t in targets) {
+                    target = t.transform;
+                    break;
                 }
             }
-            }
-            int health = GetComponentInChildren<CharacterStats>().health;
-            int maxHealth = GetComponentInChildren<CharacterStats>().getMaxHealth();
-            if (health > 0.5 * maxHealth) {
-            float distance = Vector3.Distance(target.position, transform.position);
-            if (distance <= lookRadius) {
-                agent.SetDestination(target.position);
-                if (distance <= attackRadius) {
-                    attackEntity();
+            
+            if (target != null) {
+                health = GetComponentInChildren<CharacterStats>().health;
+                int maxHealth = GetComponentInChildren<CharacterStats>().getMaxHealth();
+                if (health > 0.5 * maxHealth) {
+                    float distance = Vector3.Distance(target.position, transform.position);
+                    if (distance <= lookRadius) {
+                        agent.SetDestination(target.position);
+                        if (distance <= attackRadius) {
+                            attackEntity();
+                        }
+                    }
                 }
+                if (health <= 0.5 * maxHealth) {
+                    float distance = Vector3.Distance(ally.position,transform.position);
+                    agent.SetDestination(target.position);
+                }   
             }
-            }
-            if (health <= 0.5 * maxHealth) {
-                float distance = Vector3.Distance(ally.position,transform.position);
-                agent.SetDestination(target.position);
-            }   
-
+        }
         if (evil) {
-                agent.SetDestination(target.position);
+                Layer = LayerMask.GetMask("Enemy");
+                agent.SetDestination(ally.position);
                 attackEntity();
             }
     }
@@ -73,7 +87,7 @@ public class NPCController : MonoBehaviour
             if (!evil) {
             target.GetComponent<EnemyStats>().TakeDamage(attackDamage);
             } else {
-                target.GetComponent<CharacterStats>().TakeDamage(attackDamage);
+                ally.GetComponent<CharacterStats>().TakeDamage(attackDamage);
             }
             lastHit = Time.time;
         }
