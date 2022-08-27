@@ -38,18 +38,18 @@ public class EnemyController : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= lookRadius) {
            if (distance != 0) {
-            agent.SetDestination(target.position);
-            float sporaticAttack = Random.Range(0f, 1.5f);
-            if (distance <= attackRadius) {
-                if (Time.time >= Time.time + sporaticAttack) {
-                    if (distance <= attackRadius) {
-                        attackPlayer();
-                    }
-                }   
-            }
+                agent.SetDestination(target.position);
+                float sporaticAttack = Random.Range(0f, 1.5f);
+                if (distance <= attackRadius) {
+                    if (Time.time >= Time.time + sporaticAttack) {
+                        if (distance <= attackRadius) {
+                            attackPlayer();
+                        }
+                    }   
+                }
             
+            }
         }
-    }
     }
 
     void attackPlayer() {
