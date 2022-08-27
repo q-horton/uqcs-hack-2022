@@ -298,3 +298,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  pickup: {fileID: 9074176127515209590, guid: 31170a104d4a55e4c9b2222fab305db6, type: 3}

@@ -740,6 +740,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3918530948547861961, guid: 2125e70ba9d94304d9c7e3d78b829f07, type: 3}
+      propertyPath: pickup
+      value: 
+      objectReference: {fileID: 935334277}
     - target: {fileID: 3918530948547861963, guid: 2125e70ba9d94304d9c7e3d78b829f07, type: 3}
       propertyPath: m_AutoBraking
       value: 1
@@ -1190,6 +1194,10 @@ PrefabInstance:
       propertyPath: ps
       value: 
       objectReference: {fileID: 50082383}
+    - target: {fileID: 8347858538446661878, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
+      propertyPath: Enemy.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 8506349010948407701, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
       propertyPath: cs
       value: 
@@ -1211,6 +1219,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &935334277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9074176127515209590, guid: 31170a104d4a55e4c9b2222fab305db6, type: 3}
+  m_PrefabInstance: {fileID: 1557347462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &979601970
 GameObject:
   m_ObjectHideFlags: 0
