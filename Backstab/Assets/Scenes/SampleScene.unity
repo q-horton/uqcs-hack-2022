@@ -719,6 +719,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1565147304160050042, guid: 31170a104d4a55e4c9b2222fab305db6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9074176127515209590, guid: 31170a104d4a55e4c9b2222fab305db6, type: 3}
       propertyPath: m_Name
       value: Pickup
@@ -776,6 +780,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3210104538889564464, guid: 152096a5f4f586e40bd415cb8b3e0c3b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 9173104847731636627, guid: 152096a5f4f586e40bd415cb8b3e0c3b, type: 3}
       propertyPath: m_Name
       value: Overlay
