@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8347858538446661877}
   - component: {fileID: 8347858538446661878}
   - component: {fileID: 8506349010948407701}
+  - component: {fileID: -5384203256845698079}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -110,6 +111,7 @@ MonoBehaviour:
   armor:
     baseValue: 0
   healthBar: {fileID: 0}
+  isDead: 0
 --- !u!114 &8347858538446661878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +131,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   attackDamage: 50
+  stage: 0
 --- !u!114 &8506349010948407701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,12 +146,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 
   cs: {fileID: 0}
+  isDead: 0
   jump: 1
   regen: 0
   strength: 1
   speed: 1
   armour: 1
   reach: 1
+--- !u!114 &-5384203256845698079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8347858538446661865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3101de47bceec734bba92e44a2ad3cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  deathMenu: {fileID: 0}
+  playerHUD: {fileID: 0}
 --- !u!1 &8347858538502123862
 GameObject:
   m_ObjectHideFlags: 0

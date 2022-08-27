@@ -1953,6 +1953,7 @@ MonoBehaviour:
   armor:
     baseValue: 0
   healthBar: {fileID: 1651618403}
+  isDead: 0
 --- !u!114 &1499696841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2059,6 +2060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: 000000000000000000000000000000000000000000000000
   cs: {fileID: 1499696840}
+  isDead: 0
   jump: 1
   regen: 1
   strength: 1
