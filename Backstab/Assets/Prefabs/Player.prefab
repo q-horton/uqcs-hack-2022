@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 8347858538446661866}
-  stats: {fileID: 0}
+  stats: {fileID: 8506349010948407701}
   speed: 12
   gravity: -9.81
   jumpHeight: 3
@@ -143,6 +143,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
+  jump: 1
+  regen: 0
+  strength: 1
+  speed: 1
+  armour: 1
+  reach: 1
 --- !u!1 &8347858538502123862
 GameObject:
   m_ObjectHideFlags: 0

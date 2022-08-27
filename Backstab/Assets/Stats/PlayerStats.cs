@@ -4,37 +4,29 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public GameObject[] inventory;
+    public int[] inventory;
 
-    int inventorySize = 5;
-
-    public bool isInventoryFull() {
-        for (int i = 0; i < inventory.Length; i++) {
-            if (inventory[i] == null) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public int getFirstOpenInvSlot() {
-        for (int i = 0; i < inventory.Length; i++) {
-            if (inventory[i] == null) {
-                return i;
-            }
-        }
-        return -1;
-    }
+    public float jump = 1f;
+    public float regen = 0f;
+    public float strength = 1f;
+    public float speed = 1f;
+    public float armour = 1f;
+    public float reach = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        inventory = new GameObject[inventorySize];
+        inventory = new int[6];
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        jump = 1f + 0.1f * inventory[0];
+        regen = 0.5f * inventory[1];
+        strength = 1f + 0.3f * inventory[2];
+        speed = 1f + 0.2f * inventory[3];
+        armour = 1f + 0.2f * inventory[4];
+        reach = 1f + 0.05f * inventory[5];
     }
 }
