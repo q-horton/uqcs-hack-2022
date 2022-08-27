@@ -18,7 +18,7 @@ public class Stat
         return totalValue;
     }
 
-    public void scaleValue(float scale) {
-        totalValue = Mathf.FloorToInt(baseValue * scale);
+    public void addBuff(float buff) {
+        totalValue = baseValue + Mathf.FloorToInt(buff * 100);
     }
 }
