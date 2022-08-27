@@ -6,12 +6,12 @@ public class prefabSpawner : MonoBehaviour
 {
     private float nextSpawnTime;
     public static int EnemyCount = 0;
-    public int difficulty = 5;
+    public int difficulty = 20;
 
     [SerializeField]
     private GameObject EnemyPrefab;
     [SerializeField]
-    public float spawnDelay = 20f;
+    public float spawnDelay = 1f;
     // Start is called before the first frame update
     void Start()
     {

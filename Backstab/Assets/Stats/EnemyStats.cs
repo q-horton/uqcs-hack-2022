@@ -6,7 +6,7 @@ public class EnemyStats : MonoBehaviour
 {
     public int maxHealth = 100;
     int currentHealth;
-    float dropRate = 0.2f;
+    float dropRate = 1f;
     public GameObject pickup;
 
     public Material jump;

@@ -6,9 +6,10 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
 
-    public float lookRadius = 10f;
-    public float attackRadius = 7f;
+    public float lookRadius = 50f;
+    public float attackRadius = 3f;
     float timeBetweenAttacks = 5f;
+    
     public int attackDamage = 2;
     float lastHit;
 
@@ -36,12 +37,19 @@ public class EnemyController : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= lookRadius) {
+           if (distance != 0) {
             agent.SetDestination(target.position);
+            float sporaticAttack = Random.Range(0f, 1.5f);
             if (distance <= attackRadius) {
-                attackPlayer();
+                if (Time.time >= Time.time + sporaticAttack) {
+                    if (distance <= attackRadius) {
+                        attackPlayer();
+                    }
+                }   
             }
             
         }
+    }
     }
 
     void attackPlayer() {
