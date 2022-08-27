@@ -26,14 +26,14 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        jump = 1f + 0.1f * inventory[0];
-        regen = 1f + 0.05f * inventory[1];
-        strength = 1f + 0.3f * inventory[2];
-        speed = 1f + 0.2f * inventory[3];
+        jump = 1f + 0.05f * inventory[0];
+        regen = 1f + 0.01f * inventory[1];
+        strength = 1f + 0.1f * inventory[2];
+        speed = 1f + 0.05f * inventory[3];
         armour = 1f + 0.2f * inventory[4];
-        reach = 1f + 0.05f * inventory[5];
+        reach = 1f + 0.02f * inventory[5];
 
-        cs.armor.scaleValue(armour);
+        cs.armor.addBuff(armour);
 
         if (inventory[1] > regenOld) {
             cs.healthBoost(regen);
