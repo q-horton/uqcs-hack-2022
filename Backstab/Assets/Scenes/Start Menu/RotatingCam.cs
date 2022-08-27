@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotatingCam : MonoBehaviour
 {
-    public Camera camera;
+    public Camera cam;
     public int orbitRange = 100;
     public int orbitPeriod = 60;
     public int viewAngle = 20;
@@ -30,8 +30,8 @@ public class RotatingCam : MonoBehaviour
         z = orbitRange * Mathf.Sin(theta);
         phi = 270 - 180 * theta / Mathf.PI;
 
-        camera.transform.position = new Vector3(x, y, z);
-        camera.transform.rotation = Quaternion.Euler(viewAngle, phi, 0);
+        cam.transform.position = new Vector3(x, y, z);
+        cam.transform.rotation = Quaternion.Euler(viewAngle, phi, 0);
         
     }
 }

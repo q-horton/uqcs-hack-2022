@@ -26,8 +26,6 @@ public class EnemyStats : MonoBehaviour
         if (currentHealth <= 0) {
             Die();
         }
-
-
     }
     void Die() {
         //death animation
@@ -37,9 +35,6 @@ public class EnemyStats : MonoBehaviour
         dropItem();
         prefabSpawner.EnemyCount --;
         Destroy(gameObject);
-
-        
-
     }
 
     void dropItem() {
