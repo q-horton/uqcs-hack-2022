@@ -23,7 +23,7 @@ public class CharacterStats : MonoBehaviour
     }
 
     public void TakeDamage(int damage) {
-        damage = Mathf.FloorToInt(damage * (100 - armor.getValue())/100);
+        damage = Mathf.RoundToInt(damage * (100 - armor.getValue())/100);
         damage = Mathf.Clamp(damage, 0, int.MaxValue); 
         //Stops damage from making health go negative
         health -= damage;

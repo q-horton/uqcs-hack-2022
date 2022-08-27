@@ -10,6 +10,7 @@ public class Pickup : MonoBehaviour
         if (other.gameObject.tag == "Player") {
             PlayerStats ps = other.gameObject.GetComponent<PlayerStats>();
             ps.inventory[pickup.GetComponent<ID>().Id] += 1;
+            Mathf.Clamp(ps.inventory[pickup.GetComponent<ID>().Id], 0, 99);
             Destroy(pickup);
         }
     }
