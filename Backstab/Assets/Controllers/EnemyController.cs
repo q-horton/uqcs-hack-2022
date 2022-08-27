@@ -8,12 +8,12 @@ public class EnemyController : MonoBehaviour
 
     public float lookRadius = 10f;
     public float attackRadius = 7f;
-    float timeBetweenAttacks = 20f;
+    float timeBetweenAttacks = 5f;
     public int attackDamage = 2;
+    float lastHit;
 
     Transform target;
     NavMeshAgent agent;
-    bool alreadyAttacked;
 
     void OnDrawGizmosSelected()
     {
@@ -45,16 +45,10 @@ public class EnemyController : MonoBehaviour
     }
 
     void attackPlayer() {
-        if (!alreadyAttacked) {
+        if (Time.time > lastHit + timeBetweenAttacks) {
             target.GetComponent<CharacterStats>().TakeDamage(attackDamage);
-            alreadyAttacked = true;
+            lastHit = Time.time;
         }
-        Invoke(nameof(ResetAttack), timeBetweenAttacks);
-
-    }
-
-    void ResetAttack() {
-        alreadyAttacked = false; 
     }
 }
 
