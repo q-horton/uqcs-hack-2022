@@ -12,7 +12,8 @@ public class deathCheck : MonoBehaviour
     void Update()
     {
         if (stats.isDead) {
-            
+            deathMenu.SetActive(true);
+            playerHUD.SetActive(false);
         }
     }
 }
