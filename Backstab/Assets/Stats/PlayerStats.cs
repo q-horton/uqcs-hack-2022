@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour
     public float regen = 1f;
     public float strength = 1f;
     public float speed = 1f;
-    public float armour = 1f;
+    public float armour = 0;
     public float reach = 1f;
 
     int regenOld = 0;
@@ -30,7 +30,7 @@ public class PlayerStats : MonoBehaviour
         regen = 1f + 0.01f * inventory[1];
         strength = 1f + 0.1f * inventory[2];
         speed = 1f + 0.05f * inventory[3];
-        armour = 1f + 0.2f * inventory[4];
+        armour = 0.01f * inventory[4];
         reach = 1f + 0.02f * inventory[5];
 
         cs.armor.addBuff(armour);
