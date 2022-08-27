@@ -223,8 +223,8 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 128}
-      m_SelectedIDs: 
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 22740000
       m_LastClickedID: 0
       m_ExpandedIDs: 5c4cf6ff5280f6ff6496f6ff103cfdff283cfdff403cfdff583cfdff703cfdff883cfdff903cfdff0c4bfdff664dfdff6e4dfdff944dfdfffa4dfdffa861fdffb061fdffd661fdff3e62fdfffa81fdff22a3fdff8ca3fdff3eabfdff3ab4fdff82b9fdff1e59fefff8a9feff16acfeffeae2feff96fbfeff6cfcfeffb8fcfeff9efdfefff2fdfeff5802ffffb004ffff5415ffff3e16ffff4c18ffff1c1bffffec25ffff5626ffff9e29ffff3456ffff6e5bffff2465ffff2665ffff6279ffff6479ffff747effffec80ffff0883ffffaed9ffff00dbffff38fbffffaa780000ce7e0000549b000068a000003c6101004e900100
       m_RenameOverlay:
@@ -679,21 +679,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Pickups
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Pickups
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\quinn\OneDrive\Documents\School\HACKATHON\uqcs-hack-2022\Backstab
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 159}
-    m_SelectedIDs: 5ac00000
-    m_LastClickedID: 49242
+    m_SelectedIDs: b6730000
+    m_LastClickedID: 29622
     m_ExpandedIDs: 00000000225b00004a5b0000b673000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -722,7 +722,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000225b00004a5b000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000225b00004a5b0000b673000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -747,8 +747,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 22740000
+    m_LastClickedInstanceID: 29730
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
@@ -867,7 +867,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 545.5332
   m_GlobalObjectId: 
   m_InspectorMode: 1
   m_LockTracker:
