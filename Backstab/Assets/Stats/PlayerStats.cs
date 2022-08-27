@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int[] inventory;
+    public int[] inventory = new int[6];
 
     public float jump = 1f;
     public float regen = 0f;
