@@ -449,6 +449,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9173104847731636627, guid: 152096a5f4f586e40bd415cb8b3e0c3b, type: 3}
   m_PrefabInstance: {fileID: 121914882}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &121914884 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7666842442144653991, guid: 152096a5f4f586e40bd415cb8b3e0c3b, type: 3}
+  m_PrefabInstance: {fileID: 121914882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &163334271 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3565527523392369830, guid: 152096a5f4f586e40bd415cb8b3e0c3b, type: 3}
@@ -2864,6 +2875,7 @@ GameObject:
   - component: {fileID: 1647349755}
   - component: {fileID: 1647349754}
   - component: {fileID: 1647349756}
+  - component: {fileID: 1647349757}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -2960,6 +2972,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164bf8e628d1c564d9f877b72076bd3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1647349757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647349753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992ac478953e8d743a1e2adeab9bb48e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: {fileID: 121914884}
+  timeRemaining: 0
 --- !u!114 &1651618403 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9173104849213123474, guid: 152096a5f4f586e40bd415cb8b3e0c3b, type: 3}

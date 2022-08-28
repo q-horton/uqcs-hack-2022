@@ -19,7 +19,7 @@ public class SceneButton : MonoBehaviour
     }
 
     public void BossBattle() {
-        ChangeScene("BossBattle");
+        ChangeScene("BossLevel");
     }
 
     public void QuitGame() {

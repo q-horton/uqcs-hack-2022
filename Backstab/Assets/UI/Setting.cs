@@ -7,10 +7,8 @@ public class Setting : MonoBehaviour
 {
     public Slider sensitivity;
 
-    public float sen;
-
-    void Update() {
-        sen = Globals.mouseSensitivity;
+    void Start() {
+        sensitivity.value = Globals.mouseSensitivity;
     }
 
     public void setSensitivity(float value) {
