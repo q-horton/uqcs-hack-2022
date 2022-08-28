@@ -1500,6 +1500,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8347858538446661877, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
+      propertyPath: isDead
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347858538446661877, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1651618403}
@@ -2231,7 +2235,6 @@ MonoBehaviour:
   armor:
     baseValue: 0
   healthBar: {fileID: 1651618403}
-  isDead: 0
 --- !u!4 &1499696842
 Transform:
   m_ObjectHideFlags: 0
