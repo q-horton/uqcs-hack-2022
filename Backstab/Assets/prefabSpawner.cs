@@ -33,7 +33,7 @@ public class prefabSpawner : MonoBehaviour
     {
         randomX = Random.Range(-100f,100f);
         randomY = Random.Range(-150f,150f);
-        Vector3 randomPlace = new Vector3(randomX, 1.5f, randomY);
+        Vector3 randomPlace = new Vector3(randomX, 1.0001f, randomY);
         nextSpawnTime = Time.time + spawnDelay;
         if (EnemyCount < difficulty) {
             Instantiate(EnemyPrefab, randomPlace, transform.rotation); 
