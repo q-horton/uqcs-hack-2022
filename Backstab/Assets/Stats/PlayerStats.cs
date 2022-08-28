@@ -4,43 +4,42 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int[] inventory = new int[6];
 
     public CharacterStats cs;
     public bool isDead = false;
 
-    public float jump = 1f;
-    public float regen = 1f;
-    public float strength = 1f;
-    public float speed = 1f;
-    public float armour = 0f;
-    public float reach = 1f;
+    public float jump = Globals.baseStats[0];
+    public float regen = Globals.baseStats[1];
+    public float strength = Globals.baseStats[2];
+    public float speed = Globals.baseStats[3];
+    public float armour = Globals.baseStats[4];
+    public float reach = Globals.baseStats[5];
 
     int regenOld = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        inventory = new int[6];
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        jump = 1f + 0.05f * inventory[0];
-        regen = 1f + 0.01f * inventory[1];
-        strength = 1f + 0.1f * inventory[2];
-        speed = 1f + 0.05f * inventory[3];
-        armour = 0.01f * inventory[4];
-        reach = 1f + 0.02f * inventory[5];
+        jump = Globals.baseStats[0] + 0.05f * Globals.inventory[0];
+        regen = Globals.baseStats[1] + 0.01f * Globals.inventory[1];
+        strength = Globals.baseStats[2] + 0.1f * Globals.inventory[2];
+        speed = Globals.baseStats[3] + 0.05f * Globals.inventory[3];
+        armour = Globals.baseStats[4] + 0.01f * Globals.inventory[4];
+        reach = Globals.baseStats[5] + 0.02f * Globals.inventory[5];
 
         isDead = cs.isDead;
 
         cs.armor.addBuff(armour);
 
-        if (inventory[1] > regenOld) {
+        if (Globals.inventory[1] > regenOld) {
             cs.healthBoost(regen);
-            regenOld = inventory[1];
+            regenOld = Globals.inventory[1];
         }
     }
 }

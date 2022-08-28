@@ -21,5 +21,9 @@ public class SceneButton : MonoBehaviour
     public void BossBattle() {
         ChangeScene("BossBattle");
     }
+    
+    public void QuitGame() {
+        Application.Quit();
+    }
 
 }

@@ -25,11 +25,11 @@ public class UpdateInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        jump.text = stats.inventory[0].ToString();
-        regen.text = stats.inventory[1].ToString();
-        strength.text = stats.inventory[2].ToString();
-        speed.text = stats.inventory[3].ToString();
-        armour.text = stats.inventory[4].ToString();
-        reach.text = stats.inventory[5].ToString();
+        jump.text = Globals.inventory[0].ToString();
+        regen.text = Globals.inventory[1].ToString();
+        strength.text = Globals.inventory[2].ToString();
+        speed.text = Globals.inventory[3].ToString();
+        armour.text = Globals.inventory[4].ToString();
+        reach.text = Globals.inventory[5].ToString();
     }
 }

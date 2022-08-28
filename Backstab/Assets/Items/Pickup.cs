@@ -9,8 +9,8 @@ public class Pickup : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player") {
             PlayerStats ps = other.gameObject.GetComponent<PlayerStats>();
-            ps.inventory[pickup.GetComponent<ID>().Id] += 1;
-            Mathf.Clamp(ps.inventory[pickup.GetComponent<ID>().Id], 0, 99);
+            Globals.inventory[pickup.GetComponent<ID>().Id] += 1;
+            Mathf.Clamp(Globals.inventory[pickup.GetComponent<ID>().Id], 0, 99);
             Destroy(pickup);
         }
     }
