@@ -6,7 +6,6 @@ public class PlayerStats : MonoBehaviour
 {
 
     public CharacterStats cs;
-    public bool isDead = false;
 
     public float jump = Globals.baseStats[0];
     public float regen = Globals.baseStats[1];
@@ -32,8 +31,6 @@ public class PlayerStats : MonoBehaviour
         speed = Globals.baseStats[3] + 0.05f * Globals.inventory[3];
         armour = Globals.baseStats[4] + 0.01f * Globals.inventory[4];
         reach = Globals.baseStats[5] + 0.02f * Globals.inventory[5];
-
-        isDead = cs.isDead;
 
         cs.armor.addBuff(armour);
 
