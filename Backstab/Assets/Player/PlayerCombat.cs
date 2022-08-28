@@ -12,12 +12,11 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = baseAttackRange;
     public LayerMask Enemy;
     public int attackDamage = baseAttackDamage;
-    public bool stage = false;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("e")) {
+        if(Input.GetKeyDown(KeyCode.E)) {
             Attack();
         }
         attackRange = baseAttackRange * ps.reach;
@@ -30,8 +29,11 @@ public class PlayerCombat : MonoBehaviour
         Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, Enemy);
         if (hitEnemies != null) {
             foreach(Collider e in hitEnemies)
-            {
-                //Attack enemies
+            {   
+                if (e == null) {
+                    Debug.Log("no e");
+                }
+                Debug.Log("we hit" + e.name);
                 e.GetComponentInParent<EnemyStats>().TakeDamage(attackDamage);
                 
             }

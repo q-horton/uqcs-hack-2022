@@ -8,13 +8,13 @@ public class EnemyController : MonoBehaviour
 
     public float lookRadius = 99f;
     public float attackRadius = 6f;
-    float timeBetweenAttacks = 5f;
+    public float timeBetweenAttacks = 2f;
     
     public int attackDamage = 5;
-    float lastHit;
+    public float lastHit = 0f;
 
-    Transform target;
-    NavMeshAgent agent;
+    public Transform target ;
+    public NavMeshAgent agent;
 
     void OnDrawGizmosSelected()
     {
@@ -36,26 +36,37 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
+
         if (distance <= lookRadius) {
             agent.SetDestination(target.position);
-            float sporaticAttack = Random.Range(0f, 1.5f);
-            if (distance <= attackRadius) {
-                if (Time.time >= Time.time + sporaticAttack) {
-                    if (distance <= attackRadius) {
+            //float sporaticAttack = Random.Range(0f, 0.5f);
+            //if (distance <= attackRadius) {
+             //   if (Time.time >= Time.time + sporaticAttack) {
+               //     if (distance <= attackRadius) {
                         attackPlayer();
                         Debug.Log("attacking the player");
                     }
-                }   
-            }
+                 //   if (distance <= agent.stoppingDistance) {
+                 //       FaceTarget();
+                 //   }
+              //  }   
+         //   }
             
             
-        }
+      //  }
+    }
+
+    void FaceTarget()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
     void attackPlayer() {
         if (Time.time > lastHit + timeBetweenAttacks) {
-            target.GetComponent<CharacterStats>().TakeDamage(attackDamage);
+            target.GetComponentInChildren<CharacterStats>().TakeDamage(attackDamage);
             lastHit = Time.time;
-            Debug.Log("attack reset");
         }
     }
+    
 }

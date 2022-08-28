@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 98683586}
   - component: {fileID: 98683585}
   - component: {fileID: 98683584}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Capsule (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 172774334}
   - component: {fileID: 172774333}
   - component: {fileID: 172774332}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 225785304}
   - component: {fileID: 225785303}
   - component: {fileID: 225785302}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 232265619}
   - component: {fileID: 232265618}
   - component: {fileID: 232265617}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 403553841}
   - component: {fileID: 403553840}
   - component: {fileID: 403553839}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Capsule (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599328549}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1014,7 +1014,7 @@ GameObject:
   - component: {fileID: 680058175}
   - component: {fileID: 680058174}
   - component: {fileID: 680058173}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1168,7 +1168,7 @@ GameObject:
   - component: {fileID: 768089687}
   - component: {fileID: 768089686}
   - component: {fileID: 768089685}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (1)
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -1274,7 +1274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 790069642}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Monument
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1388,6 +1388,10 @@ PrefabInstance:
     - target: {fileID: 8347858538446661878, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
       propertyPath: Enemy.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347858538446661878, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
+      propertyPath: attackDamage
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8347858538502123862, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
       propertyPath: m_Layer
@@ -1518,7 +1522,7 @@ GameObject:
   - component: {fileID: 979601974}
   - component: {fileID: 979601973}
   - component: {fileID: 979601972}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Capsule (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1688,7 +1692,7 @@ GameObject:
   - component: {fileID: 1173439704}
   - component: {fileID: 1173439703}
   - component: {fileID: 1173439702}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,7 +1888,7 @@ GameObject:
   - component: {fileID: 1331345447}
   - component: {fileID: 1331345446}
   - component: {fileID: 1331345445}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1982,7 +1986,7 @@ GameObject:
   - component: {fileID: 1460481181}
   - component: {fileID: 1460481180}
   - component: {fileID: 1460481179}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2186,7 +2190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d7a5db5d6d5c64c91c41a4086b1b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: 000000000000000000000000000000000000000000000000
   cs: {fileID: 1499696840}
   isDead: 0
   jump: 1
@@ -2310,7 +2313,7 @@ GameObject:
   - component: {fileID: 1609589933}
   - component: {fileID: 1609589932}
   - component: {fileID: 1609589931}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2464,7 +2467,7 @@ GameObject:
   - component: {fileID: 1611638623}
   - component: {fileID: 1611638622}
   - component: {fileID: 1611638621}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2628,7 +2631,7 @@ GameObject:
   - component: {fileID: 1630004724}
   - component: {fileID: 1630004723}
   - component: {fileID: 1630004722}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2831,7 +2834,7 @@ GameObject:
   - component: {fileID: 1939760771}
   - component: {fileID: 1939760770}
   - component: {fileID: 1939760769}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2926,7 +2929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1968903163}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spawning Pillars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3057,7 +3060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106186978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90.39633, y: 0.0000019073486, z: 78.415764}
+  m_LocalPosition: {x: 90.39633, y: 8, z: 78.415764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
