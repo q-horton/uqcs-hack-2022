@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        if (!stats.isDead) {
+        if (!Globals.isDead) {
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 

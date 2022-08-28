@@ -11,7 +11,7 @@ public class deathCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stats.isDead) {
+        if (Globals.isDead) {
             deathMenu.SetActive(true);
             playerHUD.SetActive(false);
         }

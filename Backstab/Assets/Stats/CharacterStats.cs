@@ -7,7 +7,6 @@ public class CharacterStats : MonoBehaviour
     public int health { get; private set; }
     public Stat armor;
     public HealthBar healthBar;
-    public bool isDead = false;
 
     public int getMaxHealth() {
         return maxHealth;
@@ -30,9 +29,6 @@ public class CharacterStats : MonoBehaviour
         health -= damage;
         Debug.Log(transform.name + " takes " + damage + " damage.");
         healthBar.SetHealth(health);
-        if (health <= 0) {
-            Die();
-        }
     }
 
     // Start is called before the first frame update
@@ -50,12 +46,14 @@ public class CharacterStats : MonoBehaviour
     // Update is called once per frame
     void Update() 
     {
-        
+        if (health <= 0) {
+            Die();
+        }
     }
 
     public virtual void Die()
     {
-        isDead = true;
+        Globals.isDead = true;
         Cursor.lockState = CursorLockMode.None;
     }
 }

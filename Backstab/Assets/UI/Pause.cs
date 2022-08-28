@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
-    public static bool isPaused = false;
 
     public GameObject PauseMenu;
     public GameObject PlayerHUD;
@@ -12,14 +11,14 @@ public class Pause : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isPaused = false;
+        Globals.isPaused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (isPaused) {
+        if (Input.GetKeyDown(KeyCode.P)) {
+            if (Globals.isPaused) {
                 Resume();
             } else {
                 PauseGame();
@@ -32,7 +31,8 @@ public class Pause : MonoBehaviour
         PlayerHUD.SetActive(true);
 
         Time.timeScale = 1f;
-        isPaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Globals.isPaused = false;
     }
 
     void PauseGame() {
@@ -40,6 +40,7 @@ public class Pause : MonoBehaviour
         PlayerHUD.SetActive(false);
 
         Time.timeScale = 0f;
-        isPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Globals.isPaused = true;
     }
 }
