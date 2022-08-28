@@ -56,5 +56,6 @@ public class CharacterStats : MonoBehaviour
     public virtual void Die()
     {
         isDead = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
