@@ -1343,6 +1343,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5575284652743345215, guid: 911b6e0f767c7b34f95b4b154723e183, type: 3}
+      propertyPath: PlayerHUD
+      value: 
+      objectReference: {fileID: 121914883}
     - target: {fileID: 5836147421566516580, guid: 911b6e0f767c7b34f95b4b154723e183, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

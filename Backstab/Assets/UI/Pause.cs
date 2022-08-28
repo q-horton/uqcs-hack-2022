@@ -23,7 +23,6 @@ public class Pause : MonoBehaviour
             } else {
                 PauseGame();
             }
-            print("P");
         }
     }
 
