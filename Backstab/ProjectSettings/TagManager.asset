@@ -4,20 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - NPC
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - Ground
   - Water
   - UI
-  - Ground
   - Enemy
-  - Pickup
-  - InvenSlot
-  - Spawner
-  - Enemy
+  - Player
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3918530947647626549}
   - component: {fileID: 3918530947647626547}
   - component: {fileID: 3918530947647626546}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3918530947871220415}
   - component: {fileID: 3918530947871220414}
   - component: {fileID: 3918530947871220417}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 3918530948547861965}
   - component: {fileID: 3918530948547861961}
   - component: {fileID: 6802805753501621431}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -303,5 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 50
-  attackRadius: 50
+  attackRadius: 3
   attackDamage: 2
+  target: {fileID: 0}
+  agent: {fileID: 0}

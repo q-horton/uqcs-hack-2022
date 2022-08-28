@@ -30,7 +30,7 @@ public class NPCController : MonoBehaviour
 
     void Awake()
     {
-        Layer = LayerMask.GetMask("Player");
+      //  Layer = LayerMask.GetMask("Player");
     }
 
     // Start is called before the first frame update
@@ -76,7 +76,7 @@ public class NPCController : MonoBehaviour
             }
         }
         if (evil) {
-                Layer = LayerMask.GetMask("Enemy");
+               // Layer = LayerMask.GetMask("Enemy");
                 agent.SetDestination(ally.position);
                 attackEntity();
             }

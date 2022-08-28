@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -6,15 +6,14 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
 
-    public float lookRadius = 500f;
-    public float attackRadius = 3f;
+    public float lookRadius = 99f;
+    public float attackRadius = 6f;
     float timeBetweenAttacks = 5f;
     
     public int attackDamage = 5;
     float lastHit;
 
     Transform target;
-    Transform otherTarget;
     NavMeshAgent agent;
 
     void OnDrawGizmosSelected()
@@ -29,7 +28,6 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         target = PlayerManager.instance.player.transform;
-        otherTarget = GameObject.FindGameObjectWithTag("NPC").transform;
         agent = GetComponent<NavMeshAgent>();
         
     }
@@ -38,36 +36,26 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-        float distance2 = Vector3.Distance(otherTarget.position, transform.position);
-        if (distance < distance2) {
+        if (distance <= lookRadius) {
             agent.SetDestination(target.position);
             float sporaticAttack = Random.Range(0f, 1.5f);
             if (distance <= attackRadius) {
                 if (Time.time >= Time.time + sporaticAttack) {
-                        attackPlayer(1);
-                }
-            }
-        
-        } else if (distance > distance2) {
-            agent.SetDestination(otherTarget.position);
-            float sporaticAttack = Random.Range(0f, 1.5f);
-            if (distance2 <= attackRadius) {
-                if (Time.time >= Time.time + sporaticAttack) {
-                        attackPlayer(2);
+                    if (distance <= attackRadius) {
+                        attackPlayer();
+                        Debug.Log("attacking the player");
                     }
                 }   
             }
+            
+            
         }
-
-    void attackPlayer(int player) {
+    }
+    void attackPlayer() {
         if (Time.time > lastHit + timeBetweenAttacks) {
-            if (player == 1) {
             target.GetComponent<CharacterStats>().TakeDamage(attackDamage);
-            } else if (player == 2) {
-                otherTarget.GetComponent<CharacterStats>().TakeDamage(attackDamage);
-            }
             lastHit = Time.time;
+            Debug.Log("attack reset");
         }
-    }    
+    }
 }
-
