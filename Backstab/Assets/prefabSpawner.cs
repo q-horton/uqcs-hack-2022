@@ -25,12 +25,18 @@ public class prefabSpawner : MonoBehaviour
             Spawn();
         }
     }
+    float randomX = 0;
+    float randomY = 0;
+    
 
     private void Spawn()
     {
+        randomX = Random.Range(-100f,100f);
+        randomY = Random.Range(-150f,150f);
+        Vector3 randomPlace = new Vector3(randomX, 1.5f, randomY);
         nextSpawnTime = Time.time + spawnDelay;
         if (EnemyCount < difficulty) {
-            Instantiate(EnemyPrefab, transform.position, transform.rotation); 
+            Instantiate(EnemyPrefab, randomPlace, transform.rotation); 
             EnemyCount ++;
         }
     }

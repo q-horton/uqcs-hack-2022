@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
 
-    public float lookRadius = 99f;
+    public float lookRadius = 150f;
     public float attackRadius = 6f;
     public float timeBetweenAttacks = 2f;
     
@@ -42,7 +42,7 @@ public class EnemyController : MonoBehaviour
             //float sporaticAttack = Random.Range(0f, 0.5f);
             //if (distance <= attackRadius) {
              //   if (Time.time >= Time.time + sporaticAttack) {
-               //     if (distance <= attackRadius) {
+                    if (distance <= attackRadius) {
                         attackPlayer();
                         Debug.Log("attacking the player");
                     }
@@ -51,6 +51,7 @@ public class EnemyController : MonoBehaviour
                  //   }
               //  }   
          //   }
+        }
             
             
       //  }
