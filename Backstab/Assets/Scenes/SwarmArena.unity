@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 225785304}
   - component: {fileID: 225785303}
   - component: {fileID: 225785302}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1502,6 +1502,10 @@ PrefabInstance:
     - target: {fileID: 8347858538446661867, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347858538446661876, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8347858538446661877, guid: f0dd561c14e29814891364d6a7597f8b, type: 3}
       propertyPath: isDead
