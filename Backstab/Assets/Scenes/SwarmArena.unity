@@ -2065,7 +2065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Layer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   lookRadius: 5000
   attackRadius: 3
   evil: 0
